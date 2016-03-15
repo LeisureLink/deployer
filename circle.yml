@@ -1,0 +1,10 @@
+machine:
+  timezone:
+    America/Denver
+services:
+  - docker
+deployment:
+  production:
+    branch: master
+    commands:
+      - ssh -p $DEPLOY_PORT -t $DEPLOY_USER@$DEPLOY_HOST sudo docker exec deploy-manager deployer.sh $PROJECT_NAME $ENV_NAME $BUILD_NAME
