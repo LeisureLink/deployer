@@ -2,7 +2,7 @@ machine:
   timezone:
     America/Denver
   services:
-  - docker
+    - docker
 deployment:
   production:
     branch: master
