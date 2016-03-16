@@ -10,4 +10,7 @@ deployment:
   production:
     branch: master
     commands:
+      - echo $PROJECT_NAME
+      - echo $ENV_NAME
+      - echo $BUILD_NAME
       - ssh -p $DEPLOY_PORT -t $DEPLOY_USER@$DEPLOY_HOST sudo docker exec deploy-manager deployer.sh $PROJECT_NAME $ENV_NAME $BUILD_NAME
