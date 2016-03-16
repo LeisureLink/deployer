@@ -3,6 +3,9 @@ machine:
     America/Denver
   services:
     - docker
+test:
+  override:
+    - echo "no tests"
 deployment:
   production:
     branch: master
